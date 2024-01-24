@@ -1,6 +1,6 @@
 import { Button } from "@mantine/core";
 import { User, columns } from "./columns";
-import { DataTable } from "@/components/data-table";
+import { DataTable } from "./data-table";
 
 async function getUsers(): Promise<User[]> {
   const res = await fetch("https://64a6f5fc096b3f0fcc80e3fa.mockapi.io/api/users");
@@ -14,10 +14,8 @@ export default async function Page() {
 
   return (
     <section className="py-24">
-      <Button>test</Button>
-
       <div className="container">
-        <h1 className="mb-6 text-3xl font-bold">All Users</h1>
+        <h1 className="mb-6 text-3xl font-bold">Mantinue UI Table</h1>
         <DataTable columns={columns} data={data} />
       </div>
     </section>
